@@ -521,4 +521,8 @@ footer {
     scroll-snap-align: start;
     flex-shrink: 0;
   }
+  .drop-image {
+    height: 60vw;
+    aspect-ratio: auto;
+  }
 }
