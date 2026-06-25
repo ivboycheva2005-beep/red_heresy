@@ -117,6 +117,7 @@
                     if (e.isIntersecting) e.target.classList.add('visible');
                 });
             }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+            document.querySelector('.hero-video-bg')?.play();
 
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         </script>
