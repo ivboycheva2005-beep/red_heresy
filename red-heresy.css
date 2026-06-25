@@ -496,3 +496,31 @@ footer {
   .about-section { grid-template-columns: 1fr; gap: 3rem; }
   footer { flex-direction: column; gap: 1rem; text-align: center; }
 }
+
+@media (max-width: 768px) {
+  nav { padding: 1.5rem; }
+  .nav-links { display: none; }
+  section { padding: 5rem 1.5rem; }
+  .about-section { grid-template-columns: 1fr; gap: 3rem; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; }
+
+  .hero {
+    justify-content: center;
+    padding-bottom: 0;
+  }
+
+  .hero-video-bg {
+    object-position: center center;
+    object-fit: contain;
+    opacity: 0.5;
+  }
+
+  .drops-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .archive-badges {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
