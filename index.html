@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RED HERESY — Collectible Artifacts</title>
+        <link rel="stylesheet" href="red-heresy.css">
+    </head>
+    <body>
+        <nav>
+            <a href="#" class="nav-logo">RED HERESY</a>
+            <ul class="nav-links">
+                <li><a href="#drops">Drops</a></li>
+                <li><a href="#archive">Archive</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <div class="hero-video-bg"></div>
+            <div class="smoke"></div>
+            <div class="hero-line"></div>
+            <div class="hero-content">
+                <p class="hero-eyebrow">Collectible Artifacts</p>
+                <h1 class="hero-title">RED<br>HERESY</h1>
+                <p class="hero-sub">Limited &nbsp;·&nbsp; Numbered &nbsp;·&nbsp; Never Reprinted</p>
+                <p class="hero-tagline">This is not a product.<br>This is a collectible artifact.</p>
+            </div>
+        </section>
+        <section id="drops">
+            <p class="section-label reveal">Current Drops</p>
+            <div class="drops-grid">
+                <div class="drop-card reveal">
+                    <img class="drop-image" src="1.jpeg" alt="Blind Faith">
+                    <p class="drop-edition">Edition 3 / 10</p>
+                    <h3 class="drop-title">Blind Faith</h3>
+                    <p class="drop-id">RH-001</p>
+                    <a href="#" class="drop-cta">View Artifact</a>
+                </div>
+                <div class="drop-card reveal">
+                    <img class="drop-image" src="2.jpeg" alt="Crimson Doctrine">
+                    <p class="drop-edition">Edition 7 / 10</p>
+                    <h3 class="drop-title">-</h3>
+                    <p class="drop-id">RH-002</p>
+                    <a href="#" class="drop-cta">View Artifact</a>
+                </div>
+                <div class="drop-card reveal">
+                    <img class="drop-image" src="3.jpeg" alt="The Schism">
+                    <p class="drop-edition">Edition 1 / 10</p>
+                    <h3 class="drop-title">-</h3>
+                    <p class="drop-id">RH-003</p>
+                    <a href="#" class="drop-cta">View Artifact</a>
+                </div>
+            </div>
+        </section>
+        <section id="archive" class="archive-section">
+            <p class="section-label reveal">Archive</p>
+            <div class="archive-list">
+                <div class="archive-item reveal" data-image="1.jpeg">
+                    <span class="archive-num">RH-A01</span>
+                    <span class="archive-title">—</span>
+                    <div class="archive-badges">
+                        <span class="badge badge-sold">Sold Out</span>
+                        <span class="badge badge-archived">Never Reprinted</span>
+                    </div>
+                </div>
+                <div class="archive-item reveal" data-image="2.jpeg">
+                    <span class="archive-num">RH-A02</span>
+                    <span class="archive-title">—</span>
+                    <div class="archive-badges">
+                        <span class="badge badge-sold">Sold Out</span>
+                        <span class="badge badge-archived">Archived</span>
+                    </div>
+                </div>
+                <div class="archive-item reveal" data-image="3.jpeg">
+                    <span class="archive-num">RH-A03</span>
+                    <span class="archive-title">—</span>
+                    <div class="archive-badges">
+                        <span class="badge badge-sold">Sold Out</span>
+                        <span class="badge badge-archived">Never Reprinted</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="reveal">
+                <p class="section-label">About</p>
+                <blockquote class="about-quote">
+                    "Това не е продукт.<br>
+                    Това е <em>колекционерски</em><br>
+                    артефакт."
+                </blockquote>
+            </div>
+            <div class="about-text reveal">
+                <p>Red Heresy не е магазин. Това е частен архив от колекционерски арт артефакти — всяка серия строго ограничена до 10 номерирани оригинала, никога препечатани, никога презаредени.</p>
+                <p>Всеки артефакт се доставя с номериран канвас, matching тениска, ownership карта, presentation box и восъчен печат.</p>
+                <p>Веднъж архивирано — постоянно. Записът стои. Серията затваря.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <p class="section-label reveal" style="justify-content: center;">Contact</p>
+            <h2 class="contact-title reveal">Inquire About<br>An Artifact</h2>
+            <p class="contact-sub reveal">Private collector inquiries only</p>
+            <a href="mailto:redheresy.com" class="btn-primary reveal">redheresy.com</a>
+        </section>
+
+        <footer>
+            <span class="footer-logo">RED HERESY</span>
+            <span class="footer-copy">© 2024 — All Rights Reserved — Limited. Numbered. Never Reprinted.</span>
+        </footer>
+
+        <script>
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) e.target.classList.add('visible');
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        </script>
+        <div id="archive-preview" style="position:fixed; pointer-events:none; z-index:999; display:none; flex-direction:column; align-items:center; gap:0; background:#1c1c1c; padding:12px 12px 0 12px;">
+            <img id="archive-preview-img" style="width:200px; height:200px; object-fit:cover;">
+            <span id="archive-preview-label" style="font-size:0.6rem; letter-spacing:0.2em; color:#a0a0a0; text-transform:uppercase; padding:8px 12px; width:100%; text-align:center;"></span>
+        </div>
+
+        <script>
+            const preview = document.getElementById('archive-preview');
+            const previewImg = document.getElementById('archive-preview-img');
+            const previewLabel = document.getElementById('archive-preview-label');
+
+            document.querySelectorAll('.archive-item[data-image]').forEach(item => {
+                item.addEventListener('mouseenter', e => {
+                    previewImg.src = item.dataset.image;
+                    previewLabel.textContent = item.querySelector('.archive-num').textContent;
+                    preview.style.display = 'flex';
+                });
+                item.addEventListener('mousemove', e => {
+                    preview.style.left = (e.clientX + 20) + 'px';
+                    preview.style.top = (e.clientY + 20) + 'px';
+                });
+                item.addEventListener('mouseleave', () => {
+                    preview.style.display = 'none';
+                });
+            });
+        </script>
+    </body>
+</html>
